@@ -1,0 +1,1161 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --bg-color: #333333;
+    --second-bg-color: #212121;
+    --text-color: #f5f5f5;
+    --main-color:#0349fa;
+
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.header.sticky {
+    border-bottom: 1rem solid rgba(0,0,0,.2);
+}
+
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-img img {
+    width: 45vw;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 2rem;
+    transform: scaleX(-1); /* Esto voltea la imagen horizontalmente */
+    -webkit-filter: drop-shadow(0 0 3px var(--main-color));
+    filter: drop-shadow(0 0 3px var(--main-color));
+}
+
+
+/* Para asegurar que el contenedor también se ajuste */
+.home-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+
+
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+
+span {
+    color: var(--main-color);
+}
+
+
+
+.home-content h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5 ease;
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--text-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5rem ease;
+}
+
+
+.btn :hover {
+    box-shadow: none;
+} 
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--second-bg-color);
+}
+
+.about-img img {
+    width: 35vw;
+
+}
+
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+
+
+.about-content h3 {
+    font-size: 2.6rem;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    max-width: 2rem 0 3rem;
+
+}
+
+
+/* MENU - Formato de la lista */
+.contenedor-header header nav ul li a {
+    text-align: none;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.sobremi .fila{
+    display: flex;
+}
+
+.sobremi .fila .col{
+    width: 50%;
+}
+
+/* Titulos */
+.about .fila .col h3{
+    font-size: 2.6rem;
+    margin-bottom: 25px;
+}
+
+.about .fila .col ul{
+    list-style: none;
+}
+
+.about .fila .col ul li{
+    margin: 12px 0;
+    font-size: 1.6rem;
+}
+
+/*Los titulos de la izquida color rosados pj"telefono*/
+.about .fila .col ul li strong{
+    display: inline-block;
+    color: var(--main-color);
+    width: 130px;
+    font-size: 1.6rem;
+   
+}
+
+/* color a freenlarce*/
+.about .fila .col ul li span{
+    background-color: var(--main-color);
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    color: var(--text-color);
+
+}
+
+
+
+/* experiencias relevantess */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: rgba(128, 124, 124, 0.9); /* Usando el --second-bg-color con transparencia */
+    background-color: var(--second-bg-color);
+    margin: 15% auto;
+    padding: 2rem;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 1rem;
+    position: relative;
+    color: var(--text-color);
+    font-size: 18px; /* era 1.8rem */
+}
+
+/* Opcional: agregar una sutil animación al abrir */
+@keyframes modalFade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.modal-content {
+    animation: modalFade 0.3s ease-in;
+}
+
+.close {
+    color: var(--text-color);
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: -1rem;
+}
+
+.close:hover {
+    color: var(--main-color);
+}
+
+.modal-body {
+    margin-top: 1.5rem;
+}
+
+.modal-body ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.modal-body h4 {
+    color: var(--main-color);
+    margin-top: 1rem;
+}
+
+.modal-body li {
+    margin: 0.5rem 0;
+}
+
+
+
+
+
+
+
+.services h2 {
+    margin-bottom: 5rem;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+
+.services-container .services-box {
+    flex: 1 1 30rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+}
+
+.services-box i {
+    font-size: 7rem;
+    color: var(--main-color);
+}
+
+.services-container .services-box:hover {
+border-color: var(--main-color);
+
+transform: scale(1.02);
+} 
+
+.services-box h3 {
+    font-size: 2.6rem;
+
+}
+
+.services-box p {
+    font-size: 1.6rem;
+    margin: 1rem ;
+}
+
+/* seccion HABILIDADES*/
+
+/*Fondo de sesion Habilidades profesionales*/
+.habilidadesprofesionales{
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.habilidadesprofesionales .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+
+/*Titulo habiidades profesionales*/
+.habilidadesprofesionales h2{
+    font-size: 45px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Propiedade para sean flexibles las cajas*/
+.habilidadesprofesionales .fila{
+    display: flex;
+}
+
+.habilidadesprofesionales .fila .col {
+    width: 50%;
+    padding: 0 20px;
+    
+}
+
+/*Titulos*/
+.habilidadesprofesionales .fila .col h3{
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: var(--text-color);
+}
+
+
+.habilidadesprofesionales .habilidades span{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+/*BARRA DE % de las habilidades*/
+.habilidadesprofesionales .habilidades .barra-habilidades{
+    height: 8px;
+    width: 80%;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/*figma*/
+.habilidadesprofesionales .habilidades .progreso {
+    background-color:var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    animation: progreso 2s forwards;
+    color: var(--text-color);
+}
+
+@keyframes progreso {
+    0%{width: 0;}
+    100%{width: 90%;}
+}
+
+/*adobe*/
+.habilidadesprofesionales .habilidades .progreso1 {
+    background-color:var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    animation: progreso1 2s forwards;
+}
+
+@keyframes progreso1 {
+    0%{width: 0;}
+    100%{width: 60%;}
+}
+/*html*/
+.habilidadesprofesionales .habilidades .progreso2 {
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    animation: progreso2 2s forwards;
+}
+
+@keyframes progreso2 {
+    0%{width: 0;}
+    100%{width: 30%;}
+}
+
+/*css*/
+.habilidadesprofesionales .habilidades .progreso3 {
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    animation: progreso3 2s forwards;
+}
+
+@keyframes progreso3 {
+    0%{width: 0;}
+    100%{width: 30%;}
+}
+
+/*wireframe  prototipado*/
+.habilidadesprofesionales .habilidades .progreso4 {
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    animation: progreso4 2s forwards;
+}
+
+@keyframes progreso4 {
+    0%{width: 0;}
+    100%{width: 80%;}
+}
+
+
+/*Canva*/
+.habilidadesprofesionales .habilidades .progreso5 {
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    animation: progreso5 2s forwards;
+}
+
+@keyframes progreso5 {
+    0%{width: 0;}
+    100%{width: 90%;}
+}
+
+/*Trello*/
+.habilidadesprofesionales .habilidades .progreso6 {
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    animation: progreso6 2s forwards;
+}
+
+@keyframes progreso6 {
+    0%{width: 0;}
+    100%{width: 80%;}
+}
+
+/*Paquete Office*/
+.habilidadesprofesionales .habilidades .progreso7 {
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    animation: progreso7 2s forwards;
+}
+
+@keyframes progreso7 {
+    0%{width: 0;}
+    100%{width: 80%;}
+}
+
+/*Inteligencia artificial*/
+.habilidadesprofesionales .habilidades .progreso8 {
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    animation: progreso8 2s forwards;
+}
+
+@keyframes progreso8 {
+    0%{width: 0;}
+    100%{width: 80%;}
+}
+
+/*rabajo en Equipo y Autonomía*/
+.habilidadesprofesionales .habilidades .progreso9 {
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    animation: progreso9 2s forwards;
+}
+
+@keyframes progreso9 {
+    0%{width: 0;}
+    100%{width: 90%;}
+}
+
+/*Responsabilidad*/
+.habilidadesprofesionales .habilidades .progreso10 {
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    animation: progreso10 2s forwards;
+}
+
+@keyframes progreso10 {
+    0%{width: 0;}
+    100%{width: 90%;}
+}
+
+/*Resolución de Problemas*/
+.habilidadesprofesionales .habilidades .progreso11 {
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    animation: progreso11 2s forwards;
+}
+
+@keyframes progreso11 {
+    0%{width: 0;}
+    100%{width: 90%;}
+}
+
+/*Adaptabilidad*/
+.habilidadesprofesionales .habilidades .progreso12 {
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    animation: progreso12 2s forwards;
+}
+
+@keyframes progreso12 {
+    0%{width: 0;}
+    100%{width: 90%;}
+}
+
+
+/*PEmpatía*/
+.habilidadesprofesionales .habilidades .progreso13 {
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    animation: progreso12 2s forwards;
+}
+
+@keyframes progreso13 {
+    0%{width: 0;}
+    100%{width: 90%;}
+}
+
+
+/*Puntualidad*/
+.habilidadesprofesionales .habilidades .progreso14 {
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    animation: progreso14 2s forwards;
+}
+
+@keyframes progreso14 {
+    0%{width: 0;}
+    100%{width: 90%;}
+}
+
+ /* Circulos %*/
+.habilidadesprofesionales .habilidades .barra-habilidades span{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: var(--main-color);
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -15px;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+
+
+.portfolio {
+    background: var(--second-bg-color);
+}
+
+
+.portfolio h2 {
+    margin-bottom: 4rem;
+
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    grid-area: 2.5rem;
+    gap: 20px;
+    
+}
+
+.portfolio-box {
+    position: relative;
+    overflow: visible; /* Asegura que el texto sea visible fuera de la caja */
+}
+
+.more-info {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #0ef;
+    text-decoration: none;
+    font-size: 0.9em;
+    z-index: 2; /* Asegura que esté por encima de otros elementos */
+}
+
+.more-info:hover {
+    text-decoration: underline;
+}
+
+
+.portfolio-container .portfolio-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display:flex;
+}
+
+.portfolio-box img {
+    width: 100%;
+    height: 200px;
+    transition: .5s ease;
+}
+
+.portfolio-box:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-box .portfolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,.1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+
+}
+
+.portfolio-box:hover .portfolio-layer {
+    transform: translateY(0);
+}
+
+.portfolio-layer h4 {
+    font-size: 1.9rem;
+    margin-bottom: .9rem;
+}
+
+.portfolio-layer p {
+    font-size: 1.2rem;
+    margin: .7rem 0;
+}
+
+/* Nuevo estilo específico para botones del portfolio */
+.portfolio-layer .btn {
+    background: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--second-bg-color);
+    color: var(--text-color);
+    border: 2px solid var(--bg-colorr); /* Opcional: para dar más contraste */
+    font-size: 1.1rem;
+    margin: .5rem;
+    padding: .9rem 1.5rem;
+}
+
+/* Efecto hover para los botones del portfolio */
+.portfolio-layer .btn:hover {
+    background: var(--text-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1.5rem var(--text-color);
+}
+
+/* esta parte es del a conde va el icono que no coloque 
+
+.portfolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+*/
+/* eliminar .portfolio-layer a i {
+    font-size: 2rem;
+    color: var(--second-bg-color);
+
+}
+    es el formato del icono que no coloque 
+
+.portfolio-layer a i {
+    font-size: 2rem;
+    color: var(--second-bg-color);
+
+}
+*/
+
+.nota {
+    min-height: auto;
+    flex-direction: column; /* Asegúrate de apilar los elementos verticalmente */
+    align-items: center; /* Centra el título horizontalmente */
+    gap: 2rem;
+    background: var(--second-bg-color);
+    padding: 5%;
+    
+
+   
+}
+
+.nota h2 {
+    margin-bottom: 3rem;
+
+    }
+
+.heading {
+    text-align: center; /* Centra el texto del encabezado */
+    line-height: 1.2;
+
+}
+
+.nota p {
+    font-size: 1.6rem;
+    max-width: 60rem; /* Puedes ajustar este valor según tus necesidades */
+    margin: 1rem auto;
+   
+}
+
+
+
+.contact {
+    background-color: var(--bg-color)
+
+}
+
+.contact h2 {
+    margin-bottom: 3rem;
+
+
+}
+
+.contact form {
+    
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--main-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+
+}
+
+.contact form .input-box input {
+    width: 49%;
+
+}
+
+.contact form textarea {
+    resize: none;
+
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+/* ultima parte, pie de pag*/
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+}
+
+.footer-iconTop a {
+display: inline-flex;
+justify-content: center;
+align-items: center;
+padding: 0.5rem;
+background: var(--main-color);
+border-radius: .8rem;
+transition: .5s ease;
+}
+
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+
+}
+
+/* @media para que se adapte a diferentes tamaños de dispopsitivos */
+
+
+@media (max-width: 1200px){
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+
+section {
+    padding: 10rem 3% 2rem;
+}
+
+.services {
+    padding-bottom: 7rem;
+}
+
+.portfolio {
+    padding-bottom: 7rem;
+}
+
+.contact {
+    min-height: auto;
+}
+
+.footer {
+    padding: 2rem 3%;
+}
+}
+
+@media (max-width: 768px){
+    #menu-icon {
+        display: block;
+    }
+
+
+.navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--bg-color);
+    border-top: .1rem solid rgba(0,0,0,.2);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    display: none;
+}
+
+
+.navbar.active {
+    display: block;
+}
+
+.navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+
+}
+
+.home {
+    flex-direction: column;
+
+    }
+
+.home-content h3 {
+    font-size: 2.6rem;
+}
+
+.home-content h1 {
+    font-size: 5rem;
+}
+
+.home-img img {
+    width: 70vw;
+    margin-top: 4rem;
+}
+
+.about {
+    flex-direction: column-reverse;
+}
+
+.about img {
+    width: 70vw;
+    margin-top: 4rem; 
+}
+
+.services h2 {
+    margin-bottom: 3rem;
+}
+
+.portfolio h2 {
+    margin-bottom: 3rem;
+}
+
+
+.portfolio-container {
+    grid-template-columns: repeat(2,1fr);
+}
+}
+
+@media (max-width: 617px){
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+ @media (max-width: 450px){
+    html {
+        font-size: 50%;
+    }
+
+
+.contact form .input-box input {
+    width: 100%;
+}
+}
+
+
+@media (max-width: 365px){
+    .home-img img {
+        width: 90vw;
+    }
+    
+.about-img img {
+    width: 90vw;
+}
+
+.footer{
+    flex-direction: column-reverse;
+}
+
+.footer p {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+}
+
+/* Estilo para el enlace "Más info" */
+a[data-modal].more-info {
+    color: #fff !important; /* Color blanco para mejor legibilidad */
+    font-size: 1.2rem !important; /* Tamaño un poco más grande */
+    text-decoration: underline; /* Mantener el subrayado */
+    transition: .5s ease;
+}
+
+a[data-modal].more-info:hover {
+    opacity: 0.8; /* Efecto sutil al pasar el mouse */
+}
+
+
+
+
+    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
